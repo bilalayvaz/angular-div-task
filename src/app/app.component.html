@@ -1,0 +1,13 @@
+<div class="container">
+  <div>
+    <button type="button" (click)="addNewDiv()">New Div</button>
+  </div>
+  <div class="div-array">
+    <!-- I created the loop of the array using the ngFor structural directive. -->
+    <!-- With the ngClass attribute directive, I changed the classes of the div elements according to whether the index of the elements of the array is odd or even. -->
+    <div
+      *ngFor="let div of divArray; let i = index"
+      [ngClass]="i % 2 === 0 ? 'gray' : 'green'"
+    ></div>
+  </div>
+</div>
